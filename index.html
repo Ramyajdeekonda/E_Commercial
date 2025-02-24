@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Treats | Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Tasty Treats</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Fresh & Delicious Food</h2>
+            <p>Order your favorite meals online</p>
+            <a href="#menu" class="cta-button">View Menu</a>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-grid" id="menu-items">
+                <!-- Menu items will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Add cart section -->
+        <section id="cart-page" style="display: none;">
+            <h2>Your Cart</h2>
+            <div id="cart-items-list"></div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-page-total">0.00</span></strong>
+                </div>
+                <button id="checkout-btn" class="cta-button">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: rmjyothika@gmail.com</p>
+                <p>Phone: +91 8179926256</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Update payment modal with more options -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Select Payment Method</h2>
+            <div class="payment-options">
+                <button class="payment-btn" data-method="upi">
+                    <i class="fas fa-mobile-alt"></i> UPI
+                </button>
+                <button class="payment-btn" data-method="credit">
+                    <i class="fas fa-credit-card"></i> Credit Card
+                </button>
+                <button class="payment-btn" data-method="debit">
+                    <i class="fas fa-credit-card"></i> Debit Card
+                </button>
+                <button class="payment-btn" data-method="netbanking">
+                    <i class="fas fa-university"></i> Net Banking
+                </button>
+                <button class="payment-btn" data-method="cash">
+                    <i class="fas fa-money-bill-wave"></i> Cash on Delivery
+                </button>
+            </div>
+            <div id="payment-details"></div>
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="cart-items"></div>
+                <div class="total">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button id="confirm-payment" class="cta-button">Confirm Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
