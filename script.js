@@ -11,7 +11,7 @@ const menuItems = [
         id: 2,
         name: "Margherita Pizza",
         price: 14.99,
-        image: "margherita.jpg",
+        image: "margherita_1.jpg",
         description: "Traditional Italian pizza with tomatoes and mozzarella"
     },
     {
